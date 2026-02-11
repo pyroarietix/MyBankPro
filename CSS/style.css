@@ -1,0 +1,228 @@
+/* 1. CORE VARIABLES */
+:root {
+    --bg-dark: #0d1117;           
+    --card-bg: #161b22;           
+    --accent: #bc8cf2;            
+    --accent-dim: rgba(188, 140, 242, 0.1);
+    --text-primary: #F0F6FC;   
+    --text-secondary: #8B949E;
+    --text-muted: #484F58; 
+    --text-highlight: #E1C7FF;
+    --success: #23d18b;           
+    --danger: #ff6b6b;
+}
+
+/* 2. BASE RESET */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary) !important;
+    min-height: 100vh;
+}
+
+/* 3. HEADER & NAV */
+.topbar {
+    background: rgba(22, 27, 34, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(188, 140, 242, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-shadow: 0 0 15px rgba(188, 140, 242, 0.3);
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+/* 4. MAIN LAYOUT */
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.atm-container {
+    display: flex;
+    background: var(--card-bg);
+    border-radius: 28px;
+    border: 1px solid rgba(188, 140, 242, 0.15);
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* 5. SIDEBAR */
+.atm-sidebar {
+    width: 240px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 40px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+.atm-btn {
+    padding: 15px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+}
+
+.atm-btn:hover {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    transform: translateX(8px);
+}
+
+.atm-btn span { font-size: 20px; }
+.atm-btn-label { font-size: 14px; font-weight: 600; color: var(--text-secondary); }
+.atm-btn:hover .atm-btn-label { color: var(--accent); }
+
+/* 6. SCREEN & CARDS */
+.atm-screen {
+    flex: 1;
+    padding: 60px;
+    background: radial-gradient(circle at top right, rgba(188, 140, 242, 0.05), transparent);
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.status-badge {
+    display: flex; align-items: center; gap: 8px; font-size: 12px;
+    color: var(--success); background: rgba(35, 209, 139, 0.1);
+    padding: 6px 16px; border-radius: 30px; border: 1px solid rgba(35, 209, 139, 0.2);
+}
+
+.dot { height: 8px; width: 8px; background: var(--success); border-radius: 50%; box-shadow: 0 0 10px var(--success); }
+
+.balance-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-header { display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 12px; letter-spacing: 1.5px; margin-bottom: 20px; }
+.atm-amount { font-size: 52px; font-weight: 800; color: var(--text-primary); letter-spacing: -1px; }
+.eye-btn { background: none; border: none; cursor: pointer; font-size: 20px; color: var(--accent); transition: 0.3s; }
+.eye-btn:hover { transform: scale(1.2); }
+.account-number { margin-top: 25px; font-family: monospace; color: var(--text-secondary); font-size: 14px; }
+
+/* 7. FORMS & INPUTS */
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 11px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px; }
+
+input, select {
+    width: 100%;
+    height: 50px;
+    background: #0d1117 !important; /* Dark background */
+    border: 1.5px solid #30363d !important; /* Subtle border */
+    border-radius: 12px !important;
+    color: white !important;
+    padding: 0 15px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s;
+    appearance: none; /* Removes default browser styling for dropdowns */
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23bc8cf2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+input:focus, select:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 10px rgba(188, 140, 242, 0.1) !important;
+}
+
+/* Organize the labels */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* Grid for organized inputs (Email and Phone on one line) */
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+.btn {
+    width: 100%; height: 55px; border: none; border-radius: 16px;
+    background: linear-gradient(135deg, #bc8cf2 0%, #6e40aa 100%);
+    color: white; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(110, 64, 170, 0.4); }
+
+/* 8. MODAL FIX */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8); backdrop-filter: blur(8px);
+    display: none; justify-content: center; align-items: center; z-index: 1000;
+}
+
+.modal-card {
+    background: var(--card-bg); padding: 40px; border-radius: 24px;
+    border: 1px solid rgba(188, 140, 242, 0.2); text-align: center; width: 90%; max-width: 400px;
+}
+
+.btn-secondary { background: #30363d; border: none; color: white; padding: 12px 20px; border-radius: 12px; cursor: pointer; }
+.btn-danger { background: var(--danger); border: none; color: white; padding: 12px 20px; border-radius: 12px; cursor: pointer; }

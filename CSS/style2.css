@@ -1,0 +1,116 @@
+.brand {
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-shadow: 0 0 15px rgba(188, 140, 242, 0.3);
+}
+
+/* 10. EDIT PAGE LAYOUT */
+
+
+/* MAIN */
+.container {
+    padding: 50px;
+
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+.card {
+    background: linear-gradient(145deg, #141a28, #0f1320);
+    border-radius: 20px;
+    padding: 35 px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+    margin-bottom: 30px;
+    color: #c7d2fe;
+}
+
+/* CONTENT */
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* USER INFO */
+.info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    width: 200px;
+    gap: 20px;
+}
+
+.info-box p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* BALANCE */
+.balance-box {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.balance {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    flex: 1;
+}
+
+.balance span {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.balance h3 {
+    margin-top: 10px;
+    font-size: 26px;
+    color: #22c55e;
+}
+
+.balance.new input {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #0b0f17;
+    color: #fff;
+}
+
+/* BUTTONS */
+.actions {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete {
+    margin-right: 10px;
+    width: 120px; height: 55px; border: none; border-radius: 16px;
+    background: #374151;
+    color: #f87171; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s;
+}
+
+.update {
+    width: 120px; height: 55px; border: none; border-radius: 16px;
+    background: linear-gradient(135deg, #bc8cf2 0%, #6e40aa 100%);
+    color: white; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s;
+}

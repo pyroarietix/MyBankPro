@@ -1,0 +1,53 @@
+.logbtn {
+    width: 25%; height: 55px; border: none; border-radius: 16px;
+    background: linear-gradient(135deg, #bc8cf2 0%, #6e40aa 100%);
+    color: white; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s;
+    position: center;
+}
+.logbtn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(110, 64, 170, 0.4); }
+
+.atm_screen {
+    flex: 1;
+    padding: 60px;
+    background: radial-gradient(circle at top right, rgba(188, 140, 242, 0.05), transparent);
+    width: 50%;
+}
+
+.back {
+    width: 100px; height: 40px; border: none; border-radius: 16px;
+    background: #0d1117;
+    color: white; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.back:hover {
+    background: #0d1117;
+    border-color: #bc8cf2;
+    transform: translateX(8px);
+}
+
+.logout {
+    width: 100px; height: 40px; border: none; border-radius: 16px;
+    background: #0d1117;
+    color: white; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.logout:hover {
+    background: #0d1117;
+    border-color: #ff1a1a;
+    transform: translateX(8px);
+}
+
+.prof {
+    width: 100px; height: 40px; border: none; border-radius: 16px;
+    background-color: #0d1117;
+    color: white; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.prof:hover {
+    background: #0d1117;
+    border-color: #bc8cf2;
+    transform: translateX(8px);
+}
